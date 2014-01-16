@@ -1,1 +1,0 @@
-python /home/ubuntu/galaxy-dist/tools/bilab/mk_dataset_workflow/chebi2hetatm.py -chebi $1 > $2
