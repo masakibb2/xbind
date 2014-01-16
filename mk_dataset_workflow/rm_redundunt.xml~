@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<tool id="rm_redundunt" name="Remove Sequance Redunduncy using CD-HIT.">
+  <description></description>
+  
+  <inputs>
+    <param name="source" format="txt" type="data" label="Source Data" />
+    <!-- param name="pattern" type="text" value="" label="Pattern" /-->
+  </inputs>
+
+  <outputs>
+    <data format="txt" name="output" />
+  </outputs>
+
+  <command interpreter="sh">rm_redundunt.sh '$source' '$output'</command>
+
+  <help>
+  </help>
+</tool>

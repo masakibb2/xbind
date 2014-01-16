@@ -1,0 +1,55 @@
+import random
+import util
+
+class _feature(object):
+	# Interface of feature vectors of a protein.
+	def __init__(self,pdbid):
+		self.pdbid = pdbid
+		self.feature = []
+	
+	def append(self,vec):
+		self.feature.append(vec)
+
+class feature(object):
+	# handler of feature vector file.
+	def __init__(self,fname):
+		self._fname = fname
+		# self.size := a number of  dataset.
+		self.size = 0
+	
+	def parse_feature(self):
+		# parse feature
+		"""
+		>>> {k:v for k,v in parse_feature(".test.feature")}
+		True
+		"""
+		prot_feature = None
+		with open(self._fname) as fp:
+			for rec in (line.strip() for line in iter(fp.readline,"")):
+				if len(rec) == 0:
+					continue
+				if rec[0] == '>':
+					if prot_feature is not None:
+						yield prot_feature
+					#
+					idch = rec[1:].strip()
+					prot_feature = _feature(idch)
+					# count size of datasets.
+					size += 1
+				else:
+					try:
+						prot_feature.append([float(i) for i in rec.split()])
+					except Exception:
+						print prot_feature.append([float(i) for i in rec.split()])
+						print prot_feature.idch
+						exit()
+			else:
+				yield prot_feature
+
+class dataset(feature):
+	def __
+
+if __name__ == "__main__":
+	import doctest
+	doctest.testmod()
+

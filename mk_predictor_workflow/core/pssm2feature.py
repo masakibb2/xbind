@@ -1,0 +1,111 @@
+import util
+
+class pssm(object):
+	def __init__(self,fname,length = 20):
+		self._length = length
+		self._fname = fname
+	
+	class _pssm(object):
+		def __init__(self,pdbid,length):
+			self.pdbid = pdbid
+			self.pssm = []
+			self.length = length
+		
+		def append(self,vec):
+			if len(vec) != self.length + 1:
+				# length + 1's dimension is flag of outside of terminal.
+				print "pssm.append(): Argument length must be %s. len(vec) == %s" % (len(vec),len(vec))
+				raise Exception,"pssm.append(): Argument length must be %s. len(vec) == %s" % (len(vec),self.length)
+			self.pssm.append(vec)
+			
+
+	def parse_pssm(self):
+		# parse pssm
+		"""
+		>>> {k:v for k,v in parse_pssm(".test.pssm")}
+		True
+		"""
+		prot_pssm = None
+		with open(self._fname) as fp:
+			for rec in (line.strip() for line in iter(fp.readline,"")):
+				if len(rec) == 0:
+					continue
+				if rec[0] == '>':
+					if prot_pssm is not None:
+						yield prot_pssm.pdbid,prot_pssm.pssm
+					prot_pssm = pssm._pssm(rec[1:].strip(),self._length)
+				else:
+					#if rec.count(":") > 0:
+					#	prot_pssm = pssm._pssm(rec[1:].strip(),length = self._length)
+					#else:
+					prot_pssm.append([float(i) for i in rec.split()] + [0])
+				
+			else:
+				yield prot_pssm.pdbid,prot_pssm.pssm
+
+	def mkvec(self,v_pssm,window,pos):
+		"""
+		>>> _pssm = [i for i in parse_pssm4pos(".test.pssm")][0][2]
+		>>> mkvec(_pssm,10,3)
+		None
+		"""
+		def _paste(vec):
+			out = []
+			for i in vec:
+				out+=i
+			return out
+
+		nu = [0]*(self._length) + [1]
+		n = v_pssm[max(0,int(pos - window/2.0)):pos]
+		c = v_pssm[pos + 1:min(int(pos + window/2.0) + 1,len(v_pssm))]
+		nu_n = [nu for i in range(int(window/2 - len(n)))]
+		nu_c = [nu for i in range(int(window/2.0 - len(c)))]
+		vec = nu_n + n + [v_pssm[pos]] + c + nu_c
+		return _paste(vec)
+
+	def make_dataset(self,window,answer):
+		# For test
+		"""
+		>>> [i for i in mkdtst_test('.test.pssm',10,answer='./.answer.test')]
+		None
+		"""
+
+		if answer is not None:
+			answer = util.ans(answer)
+			ans2int = lambda idch,pos: 1 if answer.isans(idch,pos) else -1
+		else:
+			# if answer is None. this is unknown sample.
+			ans2int = lambda idch,pos: 0
+	
+		for idch,v_pssm in self.parse_pssm():
+			idch = idch.strip()
+			idchs = [(idch,pos) for pos in range(len(v_pssm))]
+			dataset = [self.mkvec(v_pssm,window,pos) for pos in range(len(v_pssm))]
+			label = [ans2int(idch,pos) for pos in range(len(v_pssm))]
+			yield idch,idchs,label,dataset
+
+
+	def To_hist(self,div = 10):
+		# min = -16, max = 14 step by 3 (10 divison.)
+		step = 30.0/div
+		pssms = sorted([(idch,pssm) for idch,pssm in self.parse_pssm()],key= lambda x:x[0])
+		for idch,pssm in pssms:
+			N = len(pssm)
+			cnt = [0 for i in range(200)]
+			for scores in pssm:
+				scores = scores[:20]
+				for i,s in enumerate(scores):
+					for j in range(div):
+						if s >= 14 - (j+1)*step:
+							cnt[div*i + j]+=1/float(N)
+							break
+			yield idch,cnt
+
+	def make_prot_dataset(self,is_positive = True,div = 10):
+		if is_positive:
+			label = +1
+		else:
+			label = -1
+		for idch,vector in self.To_hist(div = div):
+			yield idch,label,vector
+

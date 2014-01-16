@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<tool id="get_binding_residue" name="GET binding residue using UniprotURI and HETATM ID.">
+  <description></description>
+  
+  <inputs>
+    <param name="cond" size="30" type="text" value="MAN" label="HETATOM code" />
+    <param name="source" format="txt" type="data" label="Source Data" />
+    <!-- param name="pattern" type="text" value="" label="Pattern" /-->
+  </inputs>
+
+  <outputs>
+    <data format="txt" name="output" />
+  </outputs>
+
+  <command interpreter="sh">get_fasta.sh '$cond' '$source' '$output'</command>
+
+  <help>
+  </help>
+</tool>

@@ -1,0 +1,1 @@
+{"comment": "Predictor is created by scikit-learn. PSSM is created by psi-blast.", "performance": {"AUC": 0.6432993432523693, "MCC": 0.05288531627707582, "sensitivity": 0.4, "specificity": 0.7344701583434835}, "parameter": {"kernel": "rbf", "C": 15, "window": 24, "gamma": -9}, "method": "sklearn.svm.SVC", "threshold": 0.8711393503164213}

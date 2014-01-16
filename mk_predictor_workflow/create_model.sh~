@@ -1,0 +1,1 @@
+python create_model.py -pssm $1 -answer $2 -parameter $3 -model $4

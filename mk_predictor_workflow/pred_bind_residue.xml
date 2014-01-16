@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<tool id="pred_binding_residue" name="Predict Binding Residue using generated Prediction model.">
+  <description></description>
+  
+  <inputs>
+    <param name="model" format="txt" type="data" label="Model Data" />
+    <param name="pssm" format="txt" type="data" label="PSSM Data" />
+    <param name="parameter" format="json" type="data" label="Model Description" />
+    <!-- param name="pattern" type="text" value="" label="Pattern" /-->
+  </inputs>
+
+  <outputs>
+    <data format="txt" name="pred_result" />
+  </outputs>
+
+  <command interpreter="sh">pred_bind_residue.sh '$model' '$pssm'  '$parameter' '$pred_result'</command>
+
+  <help>
+  </help>
+</tool>

@@ -1,0 +1,57 @@
+Started Mon Nov 18 13:58:40 UTC 2013
+Total seqs 5152 in test_large.fasta_60
+..........100 finished 46 clusters 116 passed 46/116 clstr/passed 2.25% done 0.6 cpu
+..........200 finished 98 clusters 225 passed 52/109 clstr/passed 4.36% done 0.75 cpu
+..........300 finished 150 clusters 351 passed 52/126 clstr/passed 6.81% done 1.69 cpu
+..........400 finished 207 clusters 482 passed 57/131 clstr/passed 9.35% done 1.91 cpu
+..........500 finished 258 clusters 625 passed 51/143 clstr/passed 12.13% done 2.08 cpu
+..........600 finished 298 clusters 682 passed 40/57 clstr/passed 13.23% done 2.51 cpu
+..........700 finished 349 clusters 902 passed 51/220 clstr/passed 17.5% done 2.67 cpu
+..........800 finished 389 clusters 1001 passed 40/99 clstr/passed 19.42% done 2.79 cpu
+..........900 finished 432 clusters 1142 passed 43/141 clstr/passed 22.16% done 3.7 cpu
+..........1000 finished 473 clusters 1365 passed 41/223 clstr/passed 26.49% done 3.83 cpu
+..........1100 finished 508 clusters 1450 passed 35/85 clstr/passed 28.14% done 4.23 cpu
+..........1200 finished 539 clusters 1537 passed 31/87 clstr/passed 29.83% done 4.33 cpu
+..........1300 finished 587 clusters 1752 passed 48/215 clstr/passed 34% done 4.48 cpu
+..........1400 finished 619 clusters 1851 passed 32/99 clstr/passed 35.92% done 4.59 cpu
+..........1500 finished 657 clusters 1960 passed 38/109 clstr/passed 38.04% done 4.71 cpu
+..........1600 finished 698 clusters 2023 passed 41/63 clstr/passed 39.26% done 5.05 cpu
+..........1700 finished 734 clusters 2114 passed 36/91 clstr/passed 41.03% done 5.17 cpu
+..........1800 finished 757 clusters 2173 passed 23/59 clstr/passed 42.17% done 5.23 cpu
+..........1900 finished 780 clusters 2206 passed 23/33 clstr/passed 42.81% done 5.33 cpu
+..........2000 finished 825 clusters 2729 passed 45/523 clstr/passed 52.96% done 5.47 cpu
+..........2100 finished 868 clusters 2864 passed 43/135 clstr/passed 55.59% done 7.12 cpu
+..........2200 finished 901 clusters 2940 passed 33/76 clstr/passed 57.06% done 7.24 cpu
+..........2300 finished 938 clusters 3102 passed 37/162 clstr/passed 60.2% done 7.37 cpu
+..........2400 finished 967 clusters 3159 passed 29/57 clstr/passed 61.31% done 7.47 cpu
+..........2500 finished 985 clusters 3247 passed 18/88 clstr/passed 63.02% done 7.52 cpu
+..........2600 finished 1005 clusters 3383 passed 20/136 clstr/passed 65.66% done 7.75 cpu
+..........2700 finished 1020 clusters 3414 passed 15/31 clstr/passed 66.26% done 7.8 cpu
+..........2800 finished 1035 clusters 3445 passed 15/31 clstr/passed 66.86% done 7.85 cpu
+..........2900 finished 1060 clusters 3519 passed 25/74 clstr/passed 68.3% done 7.95 cpu
+..........3000 finished 1073 clusters 3544 passed 13/25 clstr/passed 68.78% done 7.99 cpu
+..........3100 finished 1086 clusters 3625 passed 13/81 clstr/passed 70.36% done 8.16 cpu
+..........3200 finished 1102 clusters 3662 passed 16/37 clstr/passed 71.07% done 8.21 cpu
+..........3300 finished 1115 clusters 3680 passed 13/18 clstr/passed 71.42% done 8.25 cpu
+..........3400 finished 1137 clusters 3720 passed 22/40 clstr/passed 72.2% done 8.32 cpu
+..........3500 finished 1165 clusters 3792 passed 28/72 clstr/passed 73.6% done 8.41 cpu
+..........3600 finished 1189 clusters 3888 passed 24/96 clstr/passed 75.46% done 8.5 cpu
+..........3700 finished 1225 clusters 4079 passed 36/191 clstr/passed 79.17% done 8.7 cpu
+..........3800 finished 1253 clusters 4127 passed 28/48 clstr/passed 80.1% done 8.79 cpu
+..........3900 finished 1287 clusters 4191 passed 34/64 clstr/passed 81.34% done 8.9 cpu
+..........4000 finished 1310 clusters 4225 passed 23/34 clstr/passed 82% done 9.06 cpu
+..........4100 finished 1335 clusters 4271 passed 25/46 clstr/passed 82.89% done 9.14 cpu
+..........4200 finished 1362 clusters 4319 passed 27/48 clstr/passed 83.83% done 9.28 cpu
+..........4300 finished 1392 clusters 4363 passed 30/44 clstr/passed 84.68% done 9.38 cpu
+..........4400 finished 1437 clusters 4457 passed 45/94 clstr/passed 86.51% done 9.56 cpu
+..........4500 finished 1495 clusters 4734 passed 58/277 clstr/passed 91.88% done 9.81 cpu
+..........4600 finished 1530 clusters 4815 passed 35/81 clstr/passed 93.45% done 9.96 cpu
+..........4700 finished 1558 clusters 4892 passed 28/77 clstr/passed 94.95% done 10.11 cpu
+..........4800 finished 1573 clusters 4910 passed 15/18 clstr/passed 95.3% done 10.16 cpu
+..........4900 finished 1605 clusters 5010 passed 32/100 clstr/passed 97.24% done 10.28 cpu
+..........5000 finished 1652 clusters 5085 passed 47/75 clstr/passed 98.69% done 10.5 cpu
+..........5100 finished 1673 clusters 5117 passed 21/32 clstr/passed 99.32% done 10.61 cpu
+.....5152 finished 1707 clusters 5152 passed 34/35 clstr/passed 100% done 10.93 cpu
+Completed Mon Nov 18 14:01:17 UTC 2013
+
+Total CPUs on remote hosts: 108.74

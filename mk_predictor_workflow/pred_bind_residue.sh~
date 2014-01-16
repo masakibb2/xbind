@@ -1,0 +1,1 @@
+python pred_bind_residue.py -model $1 -pssm $2 -parameter $3 > $4

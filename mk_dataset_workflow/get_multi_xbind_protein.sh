@@ -1,0 +1,1 @@
+python /home/ubuntu/galaxy-dist/tools/bilab/mk_dataset_workflow/get_multi_xbind_protein.py -fname $1 > $2

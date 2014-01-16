@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<tool id="create_model" name="Create Prediction Model.">
+  <description></description>
+  
+  <inputs>
+    <param name="pssm" format="txt" type="data" label="PSSM Data" />
+    <param name="answer" format="txt" type="data" label="ANSWER Data" />
+    <param name="parameter" format="json" type="data" label="Model Description" />
+    <!-- param name="pattern" type="text" value="" label="Pattern" /-->
+  </inputs>
+
+  <outputs>
+    <data format="txt" name="model_name" />
+  </outputs>
+
+  <command interpreter="sh">create_model.sh '$pssm' '$answer' '$parameter' '$model_name'</command>
+
+  <help>
+  </help>
+</tool>

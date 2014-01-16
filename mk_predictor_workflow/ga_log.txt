@@ -1,0 +1,40 @@
+Gen. 0 (0.00%): Max/Min/Avg Fitness(Raw) [0.65(0.59)/0.43(0.50)/0.54(0.54)]
+Gen. 1 (100.00%): Max/Min/Avg Fitness(Raw) [0.59(0.59)/0.59(0.59)/0.59(0.59)]
+Total time elapsed: 15.189 seconds.
+#### - GenomeBase
+	Score:			 0.585039
+	Fitness:		 0.585039
+
+	Params:		 {'gauss_mu': 0, 'gauss_sigma': 1, 'rangemax': 20, 'rangemin': -20}
+
+	Slot [Evaluator] (Count: 1)
+		Name: eval_gene - Weight: 0.50
+	Slot [Initializator] (Count: 1)
+		Name: G1DListInitializatorReal - Weight: 0.50
+		Doc:  Real initialization function of G1DList
+
+   This initializator accepts the *rangemin* and *rangemax* genome parameters.
+
+   
+	Slot [Mutator] (Count: 1)
+		Name: G1DListMutatorRealGaussian - Weight: 0.50
+		Doc:  The mutator of G1DList, Gaussian Mutator
+
+   Accepts the *rangemin* and *rangemax* genome parameters, both optional. Also
+   accepts the parameter *gauss_mu* and the *gauss_sigma* which respectively
+   represents the mean and the std. dev. of the random distribution.
+
+   
+	Slot [Crossover] (Count: 1)
+		Name: G1DListCrossoverSinglePoint - Weight: 0.50
+		Doc:  The crossover of G1DList, Single Point
+
+   .. warning:: You can't use this crossover method for lists with just one element.
+
+   
+
+- G1DList
+	List size:	 3
+	List:		 [-16.51345911400988, -1.6071461381736967, -17.091961373022492]
+
+

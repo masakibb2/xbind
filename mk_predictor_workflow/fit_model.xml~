@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<tool id="fit_model_svm" name="Fit Prediction Model using Support Vector machine and Genetic Algorithm.">
+  <description></description>
+  
+  <inputs>
+    <param name="pssm" format="txt" type="data" label="PSSM Data" />
+    <param name="answer" format="txt" type="data" label="ANSWER Data" />
+    <param name="name" format="txt" type="text" label="Dataset Name" />
+    <!-- param name="pattern" type="text" value="" label="Pattern" /-->
+  </inputs>
+
+  <outputs>
+    <data format="txt" name="parameter" />
+    <data format="txt" name="ga_log" />
+  </outputs>
+
+  <command interpreter="sh">fit_model.sh '$pssm' '$answer' '$name' '$parameter' 'ga_log'</command>
+
+  <help>
+  </help>
+</tool>

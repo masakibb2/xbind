@@ -1,0 +1,7 @@
+import dataset
+
+if __name__ == "__main__":
+	acd_proteins = dataset.dataset("../dataset/mono.d4.0.acd.pssm",20,"../dataset/answer_mono.d4.0.acd.txt")
+
+	print acd._proteins.get_data(4).ToArray()
+	
