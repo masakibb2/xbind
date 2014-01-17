@@ -35,3 +35,7 @@ UniProt (http://www.uniprot.org/)
 EBI-SIFTS (http://www.ebi.ac.uk/pdbe/docs/sifts/)
  Download
 https://github.com/masakibb2/xbind
+
+連絡先
+
+masaki070540@bi.a.u-tokyo.ac.jp
