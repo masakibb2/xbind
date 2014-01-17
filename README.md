@@ -37,5 +37,8 @@ EBI-SIFTS (http://www.ebi.ac.uk/pdbe/docs/sifts/)
 https://github.com/masakibb2/xbind
 
 連絡先
-
+開発者　番野 雅城
 masaki070540@bi.a.u-tokyo.ac.jp
+
+東京大学大学院　農学生命科学研究科
+応用生命工学専攻　生物情報工学研究室
