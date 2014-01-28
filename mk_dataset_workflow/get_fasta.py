@@ -34,4 +34,4 @@ if __name__ == "__main__":
 	result = UniProt.query(make_QUERY(fname))
 	for uniprot,seq in result.fetchone():
 		print "> %s" % uniprot.value
-		print seq.value.sub("[BZJ]","X",seq)
+		print seq.value.sub("[BZJU]","X",seq)
