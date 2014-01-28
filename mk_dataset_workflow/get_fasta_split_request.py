@@ -24,7 +24,7 @@ def make_QUERY(ID_list):
 def print_fasta(result):
 	for uniprot,seq in result.fetchone():
 		print "> %s" % uniprot.value
-		print re.sub("[BZJ]","X",seq.value)
+		print re.sub("[BZJU]","X",seq.value)
 		#print seq.value
 
 	
