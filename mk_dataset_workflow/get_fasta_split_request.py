@@ -1,5 +1,6 @@
 import sparql
 import argparse
+import re
 
 ENDPOINT="http://beta.sparql.uniprot.org/"
 MAXREQUEST=100
@@ -23,7 +24,8 @@ def make_QUERY(ID_list):
 def print_fasta(result):
 	for uniprot,seq in result.fetchone():
 		print "> %s" % uniprot.value
-		print seq.value
+		print re.sub("[BZJ]","X",seq.value)
+		#print seq.value
 
 	
 
